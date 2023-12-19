@@ -1,8 +1,6 @@
 package se.lexicon;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,10 +19,12 @@ public class Main {
 
         Car skyline = new Car(1,"Nissan","Skyline");
         Car altima = new Car(2,"Nissan", "Altima");
+        Car nissan = new Car(2,"Nissan","Altima");
 
         HashMap<Integer,Car> cars = new HashMap<>();
         cars.put(1,skyline);
         cars.put(2,altima);
+        cars.put(3,altima);
 
         System.out.println("\n" + "Exercise 12: HashMap of Objects");
 
@@ -33,5 +33,22 @@ public class Main {
         }
         //System.out.println(cars.get(1));
         // System.out.println(cars.get(1).getBrand());
+        //System.out.println(altima.getId());
+
+        System.out.println("\n" + "Testing HashSet");
+        HashSet<Car> carsHashSet = new HashSet<>();
+        carsHashSet.add(altima);
+        carsHashSet.add(altima);
+        carsHashSet.add(nissan);
+        carsHashSet.add(skyline);
+        System.out.println(carsHashSet);
+        Iterator<Car> carsIterator = carsHashSet.iterator();
+        while (carsIterator.hasNext()) {
+            System.out.println(carsIterator.next().toString());
+        }
+        System.out.println("\n" + "Size of carsHashSet = " + carsHashSet.size());
+        System.out.println("Altima hash " + altima.hashCode());
+        System.out.println("Skyline hash " + skyline.hashCode());
+        System.out.println("Nissan hash " + nissan.hashCode());
     }
 }

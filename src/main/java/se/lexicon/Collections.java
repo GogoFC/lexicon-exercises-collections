@@ -72,10 +72,13 @@ public class Collections {
         days.add("fredag");
         days.add("lördag");
         days.add("söndag");
+        days.add("söndag");
         Set<String> arrangedDays = new TreeSet<>(days);
         System.out.println("\n" + "Exercise 5: HashSet and convert to TreeSet");
         System.out.println(days);
         System.out.println(arrangedDays);
+
+
     }
 
     public static void six() {
@@ -165,11 +168,6 @@ public class Collections {
             System.out.println("Value: " + entry.getValue());
         }
     }
-
-
-
-
-
 
 
 
