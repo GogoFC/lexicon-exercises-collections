@@ -26,10 +26,11 @@ public class Main {
         cars.put(1,skyline);
         cars.put(2,altima);
 
+        System.out.println("\n" + "Exercise 12: HashMap of Objects");
+
         for (Map.Entry<Integer,Car> entry: cars.entrySet()) {
             System.out.println("Make: " + entry.getValue().getBrand());
         }
-
         //System.out.println(cars.get(1));
         //System.out.println(cars.get(1).getBrand());
     }
