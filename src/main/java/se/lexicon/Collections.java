@@ -169,6 +169,85 @@ public class Collections {
         }
     }
 
+    public static void challenge1() {
+        Set<String> days = new TreeSet<>();
+        days.add("måndag");
+        days.add("tisdag");
+        days.add("onsdag");
+        days.add("fredag");
+        days.add("lördag");
+        days.add("söndag");
+        days.add("day");
+
+        Set<String> weekend = new TreeSet<>();
+        weekend.add("lördag");
+        weekend.add("söndag");
+        //weekend.add("goran");
+        //weekend.add("tisdag"); // this breaks the loop
+
+        Iterator<String> weekendIterator = weekend.iterator();
+        Iterator<String> daysIterator = days.iterator();
+
+
+        Set<String> doubleDays = new HashSet<>();
+        Iterator<String> doubleDaysIterator = doubleDays.iterator();
+
+        /*while (daysIterator.hasNext()) {
+            //System.out.println(" Outer " + " weekendIterator " + weekendIterator.next() + " daysIterator " + daysIterator.next());
+            while (weekendIterator.hasNext()) {
+                //System.out.println(" Inner " + " weekendIterator " + weekendIterator.next() + " daysIterator " + daysIterator.next());
+                if (!Objects.equals(weekendIterator.next(), daysIterator.next())) {
+                    weekendIterator.remove();
+                    System.out.println("removing");
+                }
+            }
+        }
+
+         */
+
+        /*while (daysIterator.hasNext()) {
+            while (weekendIterator.hasNext()) {
+                if (Objects.equals(weekendIterator.next(), daysIterator.next())) {
+                    daysIterator.remove();
+                    //doubleDays.add(weekendIterator.next());
+                    //doubleDays.add(weekendIterator.next());
+                }
+            }
+            break;
+        }
+
+         */
+
+
+        while (weekendIterator.hasNext()) {
+            System.out.println("iteration");
+            if (days.contains(weekendIterator.next())) {
+                doubleDays.add(weekendIterator.next());
+                weekendIterator.remove();
+                System.out.println("doubleDays inner " + doubleDays);
+                //daysIterator.remove();
+                System.out.println("inner iteration");
+            }
+        }
+        doubleDays.addAll(weekend);
+
+
+/*
+        while (daysIterator.hasNext()) {
+            if (weekend.contains(daysIterator.next())) {
+                doubleDays.add(daysIterator.next());
+                //daysIterator.remove();
+            }
+        }
+
+ */
+
+        System.out.println("days " + days);
+        System.out.println("weekend " + weekend);
+        System.out.println("doubleDays " + doubleDays);
+
+    }
+
 
 
 

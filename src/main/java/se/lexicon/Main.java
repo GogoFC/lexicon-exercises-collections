@@ -51,5 +51,7 @@ public class Main {
         System.out.println("Altima hash " + altima.hashCode());
         System.out.println("Skyline hash " + skyline.hashCode());
         System.out.println("Nissan hash " + nissan.hashCode());
+
+        Collections.challenge1();
     }
 }
