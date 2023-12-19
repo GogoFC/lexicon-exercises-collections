@@ -1,3 +1,3 @@
 # Collections
 
-(https://www.javatpoint.com/set-in-java)[https://www.javatpoint.com/set-in-java]
+[Set in Java](https://www.javatpoint.com/set-in-java)
