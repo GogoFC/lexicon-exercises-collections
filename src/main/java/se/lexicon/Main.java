@@ -31,7 +31,7 @@ public class Main {
         for (Map.Entry<Integer,Car> entry: cars.entrySet()) {
             System.out.println("Make: " + entry.getValue().getBrand());
         }
-        //System.out.println(cars.get(1));
+        System.out.println("\n" + "\"cars.get(1)\" = " + cars.get(1));
         // System.out.println(cars.get(1).getBrand());
         //System.out.println(altima.getId());
 
@@ -41,12 +41,13 @@ public class Main {
         carsHashSet.add(altima);
         carsHashSet.add(nissan);
         carsHashSet.add(skyline);
-        System.out.println(carsHashSet);
+
+        System.out.println("carsHashSet = " + carsHashSet);
         Iterator<Car> carsIterator = carsHashSet.iterator();
         while (carsIterator.hasNext()) {
             System.out.println(carsIterator.next().toString());
         }
-        System.out.println("\n" + "Size of carsHashSet = " + carsHashSet.size());
+        System.out.println("Size of carsHashSet = " + carsHashSet.size());
         System.out.println("Altima hash " + altima.hashCode());
         System.out.println("Skyline hash " + skyline.hashCode());
         System.out.println("Nissan hash " + nissan.hashCode());
