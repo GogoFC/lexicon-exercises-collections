@@ -232,6 +232,26 @@ public class Collections {
         doubleDays.addAll(weekend);
 
 
+
+
+        /*
+        while (daysIterator.hasNext()) {
+            System.out.println("iteration");
+            //if (days.contains(weekendIterator.next()) == false) {
+            if (weekend.contains(daysIterator.next())) {
+                doubleDays.add(daysIterator.next());
+                daysIterator.remove();
+                System.out.println("doubleDays inner " + doubleDays);
+                //daysIterator.remove();
+                System.out.println("inner iteration");
+            }
+        }
+        //doubleDays.addAll(weekend);
+
+         */
+
+
+
 /*
         while (daysIterator.hasNext()) {
             if (weekend.contains(daysIterator.next())) {
