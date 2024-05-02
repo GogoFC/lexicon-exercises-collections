@@ -53,5 +53,8 @@ public class Main {
         System.out.println("Nissan hash " + nissan.hashCode());
 
         Collections.challenge1();
+
+        //
+
     }
 }
